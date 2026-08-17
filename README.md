@@ -4,11 +4,6 @@ Three small, independent hooks I run in every Claude Code session on my
 machine. Each is a single file; take what you want. Wire them in
 `~/.claude/settings.json` under the event named in each section.
 
-![all three hooks exercised for real: pane-size JSON, the prompt journal, a blocked write](docs/assets/demo.svg)
-
-*Real runs of all three (the blocked write is the guard doing its job —
-it even blocked the demo command that produced this image, twice).
-Rendered from actual output; regenerate via `docs/assets/demo.ansi`.*
 
 ## term-size.sh — the model knows your pane width
 
@@ -21,6 +16,8 @@ outside tmux. Silent when the size is unknowable.
 This is the difference between diagrams that fit and diagrams that wrap into
 soup — the model can't see your terminal without it.
 
+![term-size.sh emitting the pane-size context JSON](docs/assets/term-size.svg)
+
 ## log-prompt-global.sh — a machine-wide prompt journal
 
 `UserPromptSubmit`. Appends every prompt from every session to
@@ -31,6 +28,8 @@ garbage-collect after 7 days. Optionally pipes prompts through a local
 proofreader binary before logging (skipped when absent). Fails loud on write
 errors but never blocks the prompt.
 
+![log-prompt-global.sh writing the day's prompt journal](docs/assets/log-prompt.svg)
+
 Requires `jq`.
 
 ## zettel-guard.py — a hard wall around human-only files
@@ -40,6 +39,8 @@ that would modify) into protected paths of a personal notes vault — in my
 case `notes/`, `sources/`, `inbox/`, and the index of a Zettelkasten. Reading
 is never blocked. Exit code 2 returns the rule text to the model, which then
 proposes text in chat instead of writing the file.
+
+![zettel-guard.py blocking a write to a protected path](docs/assets/zettel-guard.svg)
 
 The general pattern: any directory that must stay human-written can be fenced
 at the harness level instead of relying on instructions the model might

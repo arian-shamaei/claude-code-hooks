@@ -1,0 +1,9 @@
+  
+ \e[38;5;114;1m$\e[0m echo '{}' | bash term-size.sh     \e[2m# run inside a tmux pane\e[0m  
+ {"hookSpecificOutput":  
+   {"hookEventName": "UserPromptSubmit",  
+    "additionalContext": "\e[38;5;180m[terminal pane: 80x24 cols x rows  
+      -- size display math, tables, and code blocks  
+      to fit this width]\e[0m"}}  
+  
+  

@@ -1,0 +1,11 @@
+  
+ \e[38;5;114;1m$\e[0m bash log-prompt-global.sh \  
+     <<< '{"prompt": "add a soothing chime", ...}'  
+   
+ \e[38;5;114;1m$\e[0m cat ~/.claude/logs/prompts/2026-08-17.md  
+ # Prompt log — 2026-08-17  
+   
+ - \e[1m2026-08-17 09:13:43\e[0m \e[2m(session 9f3a2c1e)\e[0m ~/Developer/amtrino  
+   > add a soothing chime  
+  
+  

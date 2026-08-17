@@ -1,0 +1,12 @@
+  
+ \e[38;5;114;1m$\e[0m python3 zettel-guard.py <<< '{"tool_name": "Write",  
+     "tool_input": {"file_path":  
+       "~/Documents/Zettelkasten/notes/new-idea.md", ...}}'  
+   
+ \e[38;5;203;1mBLOCKED by the Zettelkasten vault rule:\e[0m\e[38;5;203m notes/, sources/,  
+ inbox/ and 000 Index.md are Arian's writing — no agent  
+ writes there, ever. Machine output goes in ai/.  
+ Propose the text in chat instead.\e[0m  
+ \e[2mexit code: 2\e[0m  
+  
+  
