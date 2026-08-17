@@ -4,6 +4,12 @@ Three small, independent hooks I run in every Claude Code session on my
 machine. Each is a single file; take what you want. Wire them in
 `~/.claude/settings.json` under the event named in each section.
 
+![all three hooks exercised for real: pane-size JSON, the prompt journal, a blocked write](docs/assets/demo.svg)
+
+*Real runs of all three (the blocked write is the guard doing its job —
+it even blocked the demo command that produced this image, twice).
+Rendered from actual output; regenerate via `docs/assets/demo.ansi`.*
+
 ## term-size.sh — the model knows your pane width
 
 `UserPromptSubmit`. Injects `[terminal pane: WxH]` into the context of every
